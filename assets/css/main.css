@@ -225,6 +225,80 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Global Layout
+--------------------------------------------------------------*/
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+}
+
+.header,
+.footer,
+main,
+section,
+.page-title {
+  min-width: 0;
+}
+
+.section {
+  scroll-margin-top: 90px;
+}
+
+.section .container,
+.page-title .container,
+.footer .container {
+  max-width: 1140px;
+}
+
+.page-title .heading {
+  padding: 60px 0;
+}
+
+.footer-top {
+  align-items: flex-start;
+}
+
+.footer-about,
+.footer-links,
+.footer-newsletter {
+  min-width: 0;
+}
+
+.footer-links ul,
+.footer-links ul li {
+  min-width: 0;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .page-title .heading {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .header .btn-getstarted {
+    margin-left: 12px;
+  }
+
+  .page-title .heading {
+    padding: 36px 16px;
+  }
+
+  .footer,
+  .footer .footer-top {
+    text-align: left;
+  }
+}
+
+/*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
