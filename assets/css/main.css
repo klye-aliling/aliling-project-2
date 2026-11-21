@@ -2348,8 +2348,219 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Modern KCC Refinements
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+:root {
+  --kcc-navy: #171f72;
+  --kcc-navy-deep: #0b1234;
+  --kcc-gold: #d4a017;
+  --kcc-gold-light: #f6d24b;
+  --kcc-cream: #f7f8fc;
+  --kcc-border: rgba(26, 35, 126, 0.12);
+  --kcc-shadow: 0 14px 36px rgba(11, 18, 52, 0.10);
+}
+
+body {
+  letter-spacing: 0;
+}
+
+.header {
+  border-bottom: 1px solid var(--kcc-border);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+}
+
+.scrolled .header {
+  box-shadow: 0 8px 24px rgba(11, 18, 52, 0.08);
+}
+
+.header .logo h1 {
+  letter-spacing: 0;
+  color: var(--kcc-navy);
+}
+
+.navmenu a,
+.navmenu a:focus {
+  letter-spacing: 0;
+}
+
+.header .btn-getstarted,
+.header .btn-getstarted:focus,
+.hero .btn-get-started,
+.about .content .read-more,
+.pricing .btn-buy,
+.contact .email-form button[type=submit],
+.course-details .course-sidebar .pricing-card .btn-enroll {
+  border-radius: 6px;
+}
+
+.hero {
+  min-height: 680px;
+}
+
+.hero:before {
+  background: linear-gradient(90deg, rgba(8, 16, 58, 0.88) 0%, rgba(23, 31, 114, 0.62) 58%, rgba(8, 16, 58, 0.20) 100%);
+}
+
+.hero h2 {
+  max-width: 760px;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.hero p {
+  max-width: 620px;
+}
+
+.section {
+  padding: 76px 0;
+}
+
+.light-background {
+  --background-color: #f7f8fc;
+}
+
+.dark-background {
+  --background-color: var(--kcc-navy-deep);
+  --surface-color: #151d58;
+}
+
+.section-title h2 {
+  letter-spacing: 1.5px;
+}
+
+.section-title p {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.page-title {
+  --background-color: var(--kcc-navy);
+  background: linear-gradient(135deg, var(--kcc-navy-deep), var(--kcc-navy));
+}
+
+.page-title nav {
+  background: var(--kcc-gold);
+}
+
+.page-title nav a,
+.page-title nav ol {
+  color: var(--kcc-navy-deep);
+}
+
+.page-title nav ol li+li::before {
+  color: rgba(11, 18, 52, 0.55);
+}
+
+.why-us .why-box,
+.features .features-item,
+.courses .course-item,
+.trainers-index .member,
+.testimonials .testimonial-item,
+.pricing .pricing-item,
+.course-details .course-content .what-you-learn,
+.course-details .course-curriculum .curriculum-section,
+.course-details .course-sidebar .pricing-card,
+.course-details .course-sidebar .course-info-card,
+.course-details .course-sidebar .course-tags,
+.events .card-body {
+  border: 1px solid var(--kcc-border);
+  border-radius: 8px;
+  box-shadow: var(--kcc-shadow);
+}
+
+.why-us .why-box {
+  border: 0;
+  background: linear-gradient(145deg, var(--kcc-navy-deep), var(--kcc-navy));
+}
+
+.why-us .icon-box,
+.features .features-item,
+.courses .course-item,
+.trainers-index .member,
+.pricing .pricing-item {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-us .icon-box:hover,
+.features .features-item:hover,
+.courses .course-item:hover,
+.trainers-index .member:hover,
+.pricing .pricing-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 160, 23, 0.55);
+  box-shadow: var(--kcc-shadow);
+}
+
+.features .features-item {
+  border-radius: 8px;
+}
+
+.courses .course-content,
+.trainers-index .member .member-content {
+  letter-spacing: 0;
+}
+
+.courses .course-content .category {
+  border-radius: 4px;
+  background: var(--kcc-navy);
+}
+
+.trainers .member .member-img {
+  border: 4px solid var(--kcc-gold-light);
+}
+
+.events .card {
+  padding: 0 20px;
+}
+
+.events .card-img {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.events .card-body {
+  border-radius: 0 0 8px 8px;
+}
+
+.footer {
+  border-top: 1px solid var(--kcc-border);
+  background: #f4f6fb;
+}
+
+.footer .footer-about .logo span,
+.footer h4 {
+  color: var(--kcc-navy);
+}
+
+.footer .copyright {
+  border-top: 1px solid var(--kcc-border);
+  background: transparent;
+}
+
+.scroll-top {
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  .why-us .why-box h3 {
+    font-size: 28px;
+  }
+
+  .events .card {
+    margin-bottom: 40px;
+  }
 }
