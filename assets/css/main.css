@@ -2564,3 +2564,130 @@ body {
     margin-bottom: 40px;
   }
 }
+
+/*--------------------------------------------------------------
+# Clean Image Alignment
+--------------------------------------------------------------*/
+.about img,
+.about-us img {
+  width: 100%;
+  height: clamp(320px, 38vw, 480px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.courses .course-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.courses .course-item > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.courses .course-content {
+  min-height: 210px;
+}
+
+.trainers-index .member {
+  width: 100%;
+}
+
+.trainers-index .member > img {
+  width: 100%;
+  height: clamp(260px, 28vw, 340px);
+  object-fit: cover;
+  object-position: center top;
+}
+
+.trainers .member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainers .member .member-img {
+  width: min(240px, 70vw);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.trainers .member .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.trainers .member .member-info {
+  width: 100%;
+  min-height: 150px;
+}
+
+.course-details .course-header .course-image img {
+  height: clamp(300px, 38vw, 420px);
+  object-position: center;
+}
+
+.course-details .tabs .tab-pane img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: contain;
+}
+
+.testimonials .testimonial-item {
+  min-height: 220px;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.events .card-img {
+  background: var(--kcc-navy-deep);
+}
+
+.events .card-img img {
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .about img,
+  .about-us img {
+    height: clamp(250px, 72vw, 380px);
+  }
+
+  .courses .course-item > img {
+    aspect-ratio: 16 / 11;
+  }
+
+  .courses .course-content {
+    min-height: 0;
+  }
+
+  .trainers-index .member > img {
+    height: clamp(240px, 88vw, 360px);
+  }
+
+  .trainers .member .member-img {
+    width: min(220px, 70vw);
+  }
+
+  .trainers .member .member-info {
+    min-height: 0;
+  }
+
+  .course-details .course-header .course-image img {
+    height: clamp(220px, 70vw, 340px);
+  }
+}
